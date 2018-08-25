@@ -1,0 +1,81 @@
+// -----------Output Tests--------------
+output ! 5
+output ! ! 5
+output ! ! ! 5
+output ! ! ! ! 5
+
+output ~ 5
+output ~ ~ 5
+output ~ ~ ~ 5
+output ~ ~ ~ ~ 5
+
+output + 2 ! 2
+output + 2 ~ 2
+output + 2 ~ ~ 2
+
+output + % * 2 + 1 1 2 ~ ~ ! ~ 2 
+output + % * 2 + 1 1 2 ~ ~ ~ ~ 2 
+
+
+// ------Var Tests-----------
+var a ! 5
+var b ! ! 5
+var c ! ! ! 5
+var d ! ! ! ! 5
+output a output b output c output d
+
+var e ~ 5
+var f ~ ~ 5
+var g ~ ~ ~ 5
+var h ~ ~ ~ ~ 5
+output e output f output g output h
+
+var i + 2 ! 2
+var j + 2 ~ 2
+var k + 2 ~ ~ 2
+output i output j output k
+
+var l + % * 2 + 1 1 2 ~ ~ ! ~ 2 
+var m + % * 2 + 1 1 2 ~ ~ ~ ~ 2 
+output l output m
+
+
+// ----- Set Tests -------------
+var apple 0
+var grapeSoda 0
+var orange 0
+var pear 0
+
+set apple ! 5
+output apple
+set apple ! ! 5
+output apple
+set apple ! ! ! 5
+output apple
+set apple ! ! ! ! 5
+output apple
+
+set grapeSoda ~ 5
+output grapeSoda
+set grapeSoda ~ ~ 5
+output grapeSoda
+set grapeSoda ~ ~ ~ 5
+output grapeSoda
+set grapeSoda ~ ~ ~ ~ 5
+output grapeSoda
+
+set orange + 2 ! 2
+output orange
+set orange + 2 ~ 2
+output orange
+set orange + 2 ~ ~ 2
+output orange
+
+set pear + % * 2 + 1 1 2 ~ ~ ! ~ 2 
+output pear
+set pear + % * 2 + 1 1 2 ~ ~ ~ ~ 2 
+output pear
+
+output * * * apple grapeSoda orange pear
+
+

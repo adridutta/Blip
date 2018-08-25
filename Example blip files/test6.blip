@@ -1,0 +1,42 @@
+var a 1     // 1
+var b * a 2 // 2
+var c * b 2 // 4
+var d * c 2 // 8
+var e * d 2 // 16
+var f * e 2 // 32
+var g * f 2 // 64
+var h * g 2 // 128
+var i * h 2 // 256
+var j * i 2 // 512
+var k * j 2 // 1024
+var l * k 2 // 2048
+var m * l 2 // 4096
+var n * m 2 // 8192
+var o * n 2 // 16384
+var p * o 2 // 32768
+var balanced + + + + a b + c d + + e f + g h + + + i j + k l + + m n + o p 
+var left + + + + + + + + + + + + + + + a b c d e f g h i j k l m n o p
+var right + a + b + c + d + e + f + g + h + i + j + k + l + m + n + o p
+var equal && == balanced left == balanced right
+text "balanced addition -- " output balanced text \n
+text "left addition -- " output left text \n
+text "right addition -- " output right text \n
+text "are they equivalent? " output equal text \n
+set balanced - - - - p o - n m - - l k - j i - - - h g - f e - - d c - b a
+set left - - - - - - - - - - - - - - - p o n m l k j i h g f e d c b a
+set right - p - o - n - m - l - k - j - i - h - g - f - e - d - c - b a
+set equal && == balanced left == balanced right
+text "balanced subtraction -- " output balanced text \n
+text "left subtraction -- " output left text \n
+text "right subtraction -- " output right text \n
+text "are they equivalent? " output equal text \n
+var somewhatnegative - 0 1
+var kindanegative ~ 1
+var reallynegative  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 1
+var belowzero && && < somewhatnegative 0 < kindanegative 0 < reallynegative 0
+set equal && == somewhatnegative kindanegative == kindanegative reallynegative
+text "somewhat negative -- " output somewhatnegative text \n
+text "kinda negative -- " output kindanegative text \n
+text "really negative -- " output reallynegative text \n
+text "are they less than zero? " output belowzero text \n
+text "are they equal? " output equal text \n

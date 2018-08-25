@@ -1,0 +1,80 @@
+var x || && 1 0 1 
+if x 
+    text 1\n 
+    if * 200 - x 1 
+        text "don't print\n" 
+    fi 
+    set x 0 
+    if * x + * 5 3 + 4 4 
+        text "don't print\n" 
+    else 
+        text 2\n 
+        if x 
+            text "don't print\n" 
+        fi 
+
+        if x 
+            text "don't print\n" 
+        else 
+            text 3\n 
+            set y 10 
+            if + - 9 y 1 
+                text "don't print\n" 
+            else 
+                text 4\n 
+            fi 
+            if y 
+                text 5\n 
+                if ! x 
+                    text 6\n 
+                fi 
+            else 
+                text "don't print\n" 
+                if - y x 
+                    text "don't print\n" 
+                fi 
+                if 1 
+                    text "don't print\n" 
+                else 
+                    text "don't print\n" 
+                fi 
+            fi 
+
+            text 7\n 
+            if 0 
+                text "don't print\n" 
+            fi 
+        fi 
+    fi 
+fi 
+text done-if\n\n 
+
+text loop\n 
+
+var isTrue && 1 ! 0 
+var isFalse && isTrue ! isTrue 
+set x 0 
+
+do || || isFalse isTrue == x 5 
+    text good\n 
+    do isFalse 
+        text bad\n 
+        do  isTrue 
+            text bad\n 
+        od 
+    od 
+    if == x 5 
+        set x 6 
+    fi 
+    do isTrue 
+        if < x 5 
+            output x 
+            text \n 
+            set x + x 1 
+        else 
+            set isTrue 0 
+        fi 
+    od 
+od 
+
+text done 
